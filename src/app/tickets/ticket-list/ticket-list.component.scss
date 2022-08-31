@@ -1,0 +1,35 @@
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    display: table;
+  }
+
+.status-new{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    gap: 10px;
+    background: #E5F6FC;
+    border-radius: 4px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 10px;
+}
+.status-edited{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    gap: 10px;
+    background: #FEF5E8;
+    color: #F79E1B;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 10px;
+}

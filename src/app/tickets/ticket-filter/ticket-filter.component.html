@@ -1,0 +1,10 @@
+<button mat-stroked-button [matMenuTriggerFor]="menu" aria-label="filter tickets" class="tickets-filter">
+    <span>Filter</span>
+    <mat-icon>filter_list</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>dialpad</mat-icon>
+      <span>Redial</span>
+    </button>
+  </mat-menu>
