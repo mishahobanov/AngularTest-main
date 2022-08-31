@@ -15,7 +15,7 @@ export const ticketsReducer= createReducer(
     on(fromTicketActions.LoadTicketsSuccess,(state, payload )=>({...state, tickets: payload.payload})),
     on(fromTicketActions.LoadTicketsFail,(state)=>({...state})),
 
-    on(fromTicketActions.createTicketsSuccess,(state, payload )=>({...state, tickets: [...state.tickets, payload.payload]})),
+  on(fromTicketActions.createTicketsSuccess, (state, { payload} )=>({...state, tickets: [...state.tickets, payload]})),
     on(fromTicketActions.createTicketsFail,(state)=>({...state})),
 
     on(fromTicketActions.updateTickets, (state) => {

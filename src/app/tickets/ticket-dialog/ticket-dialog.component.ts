@@ -44,17 +44,17 @@ export class TicketDialogComponent  {
       this.editMode = true;
     }
     this.form = this.fb.group({
-      title:  ['', [Validators.required]],
-      department:  ['', [Validators.required]],
-      message: ['', [Validators.required]],
-      attachment: ['', [Validators.required]],
+      title:  [dataDialog.element ? dataDialog.element.title : '', [Validators.required]],
+      departmentIdentifier:  [dataDialog.element ? dataDialog.element.departmentIdentifier : '', [Validators.required]],
+      message: [dataDialog.element ? dataDialog.element.message : '', [Validators.required]],
+      attachment: [dataDialog.element ? dataDialog.element.attachment : '', [Validators.required]],
     });
   }
 
   onSubmit() {
-    if (this.form.invalid) {
-      return;
-    }
+    // if (this.form.invalid) {
+    //   return;
+    // }
 
     const obj:Ticket = {
       ...this.dataDialog.element,
@@ -88,6 +88,7 @@ export class TicketDialogComponent  {
         createdAt: new Date(Date.now()),
         updateAt:new Date(Date.now())
       }
+      console.log("sdads");
       this.store.dispatch(
         createTickets({
           payload: ticketCreate,

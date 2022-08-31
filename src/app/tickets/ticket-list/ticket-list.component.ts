@@ -45,7 +45,7 @@ export class TicketListComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-   //this.dataSource.data = this.mapDepartmentById(this.items) || [];
+   this.dataSource.data = this.mapDepartmentById(this.items) || [];
     this.resultsLength = this.dataSource.data.length;
     this.dataSource.paginator = this.paginator;
     this.cdRef.detectChanges();
@@ -61,7 +61,6 @@ export class TicketListComponent implements AfterViewInit {
   mapDepartmentById(tickets: Ticket[] | null) {
     
     return tickets?.map(item => {
-    
     return { ...item, departmentName: departments.find(i => i.id == item.departmentIdentifier)?.deparmentName! };
     });
     

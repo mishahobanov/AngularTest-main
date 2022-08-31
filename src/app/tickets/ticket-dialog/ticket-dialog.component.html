@@ -6,8 +6,8 @@
               <input type="title" class="form-control mb-3" placeholder="Request name" id="inputEmail4" formControlName="title" required>
             </div>
               <div class="col-12">
-                <select class="form-select form-select mb-3" aria-label=".form-select-lg example" formControlName="department">
-                    <option selected *ngFor="let department of departmentList" [ngValue]="department">
+                <select class="form-select form-select mb-3" aria-label=".form-select-lg example" formControlName="departmentIdentifier">
+                    <option selected *ngFor="let department of departmentList" [ngValue]="department.id">
                         {{department.deparmentName}}
                     </option>
                   </select>

@@ -3,8 +3,7 @@
     <mat-icon>filter_list</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item>
-      <mat-icon>dialpad</mat-icon>
-      <span>Redial</span>
+    <button mat-menu-item (click)="onSubmit()">
+      <span>Show new Tickets</span>
     </button>
   </mat-menu>

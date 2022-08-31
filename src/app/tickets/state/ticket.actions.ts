@@ -1,5 +1,6 @@
 import { createAction, props } from '@ngrx/store';
 import { Ticket } from '../ticket.model';
+import { TicketState } from '../ticket.module';
 
 export const enum ticketsTypeAction {
 
